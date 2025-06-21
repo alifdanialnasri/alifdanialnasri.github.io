@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        body { padding:20px; }
+        input, button { margin:5px; }
+        #admin div { margin-bottom:15px; }
+    </style>
+</head>
+<body>
+<div id="login">
+    <h2>Admin Login</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+</div>
+<div id="admin" style="display:none;">
+    <h2>Site Settings</h2>
+    <div>
+        <label>Theme Color: <input type="color" id="themeColor"></label>
+        <button id="saveColor">Save Color</button>
+    </div>
+    <div>
+        <h3>Credentials</h3>
+        <input type="text" id="newUser" placeholder="New username">
+        <input type="password" id="newPass" placeholder="New password">
+        <button id="updateCred">Update</button>
+    </div>
+    <div>
+        <h3>Social Links</h3>
+        <div id="socialList"></div>
+        <input type="text" id="socialIcon" placeholder="Icon class (fab fa-github)">
+        <input type="text" id="socialLink" placeholder="URL">
+        <button id="addSocial">Add Social</button>
+    </div>
+    <div>
+        <h3>Skills</h3>
+        <div id="skillsList"></div>
+        <input type="text" id="skillName" placeholder="Skill name">
+        <input type="number" id="skillPercent" placeholder="Percent">
+        <input type="text" id="skillCert" placeholder="Certificate URL">
+        <button id="addSkill">Add Skill</button>
+    </div>
+    <div>
+        <h3>Projects</h3>
+        <div id="projectsList"></div>
+        <input type="text" id="projectTitle" placeholder="Title">
+        <input type="text" id="projectDesc" placeholder="Description">
+        <input type="text" id="projectImage" placeholder="Image URL">
+        <input type="text" id="projectLink" placeholder="Project link">
+        <input type="text" id="projectLang" placeholder="Languages comma separated">
+        <button id="addProject">Add Project</button>
+    </div>
+    <button id="logout">Logout</button>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>
